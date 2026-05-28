@@ -17,6 +17,9 @@ export function Projects() {
           const url = project.liveUrl ?? projectGithubUrl(project.repo)
           const title = project.title[locale]
           const description = project.description[locale]
+          const imageUrl = project.image
+            ? `${import.meta.env.BASE_URL}${project.image.replace(/^\//, '')}`
+            : undefined
 
           return (
             <a
@@ -26,9 +29,9 @@ export function Projects() {
               rel="noreferrer"
               className="group overflow-hidden rounded-xl border border-[var(--color-border)] bg-[var(--color-surface)]/50 backdrop-blur-sm transition-colors hover:border-[var(--color-accent)]"
             >
-              {project.image ? (
+              {imageUrl ? (
                 <img
-                  src={project.image}
+                  src={imageUrl}
                   alt={title}
                   className="h-44 w-full object-cover object-top"
                   loading="lazy"
