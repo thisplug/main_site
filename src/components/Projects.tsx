@@ -26,9 +26,18 @@ export function Projects() {
               rel="noreferrer"
               className="group overflow-hidden rounded-xl border border-[var(--color-border)] bg-[var(--color-surface)]/50 backdrop-blur-sm transition-colors hover:border-[var(--color-accent)]"
             >
-              <div className="flex h-40 items-center justify-center bg-[#1a1a1f] text-[var(--color-muted)]">
-                {title}
-              </div>
+              {project.image ? (
+                <img
+                  src={project.image}
+                  alt={title}
+                  className="h-44 w-full object-cover object-top"
+                  loading="lazy"
+                />
+              ) : (
+                <div className="flex h-44 items-center justify-center bg-[#1a1a1f] text-[var(--color-muted)]">
+                  {title}
+                </div>
+              )}
               <div className="p-4">
                 <div className="flex items-center justify-between gap-2">
                   <h3 className="font-medium text-white group-hover:text-[var(--color-accent)]">

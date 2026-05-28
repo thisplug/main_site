@@ -10,6 +10,7 @@ export type ProjectEntry = {
   description: Record<Locale, string>
   /** Демо или сайт; если не указано — ссылка на репозиторий */
   liveUrl?: string
+  image?: string
 }
 
 function githubUsername() {
@@ -37,6 +38,7 @@ export const projects: ProjectEntry[] = [
       en: 'Business site for mechanized plastering services in Chelyabinsk.',
     },
     liveUrl: 'https://thisplug.github.io/site_stroika/',
+    image: '/projects/site-stroika.png',
   },
   {
     id: 'cakes-website',
@@ -51,5 +53,6 @@ export const projects: ProjectEntry[] = [
       en: 'Business card site for a bakery with menu and contacts.',
     },
     liveUrl: 'https://thisplug.github.io/cakes-website/',
+    image: '/projects/cakes-website.png',
   },
 ]
