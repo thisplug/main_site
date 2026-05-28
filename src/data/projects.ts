@@ -25,6 +25,20 @@ export function projectGithubUrl(repo: string) {
 /** Добавьте сюда свои репозитории с GitHub */
 export const projects: ProjectEntry[] = [
   {
+    id: 'site-stroika',
+    repo: 'site_stroika',
+    status: 'deployed',
+    title: {
+      ru: 'Сайт-визитка — штукатурка',
+      en: 'Portfolio site — plastering',
+    },
+    description: {
+      ru: 'Сайт услуг механизированной штукатурки в Челябинске.',
+      en: 'Business site for mechanized plastering services in Chelyabinsk.',
+    },
+    liveUrl: 'https://thisplug.github.io/site_stroika/',
+  },
+  {
     id: 'cakes-website',
     repo: 'cakes-website',
     status: 'deployed',
